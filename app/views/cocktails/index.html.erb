@@ -8,11 +8,25 @@
 
 
 <div class="cards-container">
-  <% @cocktails.each do |cocktail| %>
 
-  <div class="card-trip">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-    </div>
-<% end %>
+<!--   <h1 class="mt-3 mb-3">Cocktails</h1>
+  <div class="row">
+    <div class="col-4">
+      <%#= link_to new_cocktail_path do %>
+        <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.pinimg.com/originals/60/f3/0a/60f30a1b38526949a1ef006ccae9cb1d.jpg')">
+          <p>Add your cocktail <i class="fas fa-plus"></i></p>
+        </div>
+      <% #end %>
+    </div> -->
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-4">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.image_url %>)">
+            <p><%= cocktail.name %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
 </div>
