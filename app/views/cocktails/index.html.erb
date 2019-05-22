@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?w968);">
+  <div class="container">
+    <h1>Cocktails help you from becoming<strong> insane</strong></h1>
+      <span><h1>Booze<strong> is life</strong></h1></span>
+    <p id="banner-typed-text"></p>
+  </div>
+</div>
+
+
+<div class="cards-container">
+  <% @cocktails.each do |cocktail| %>
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    </div>
+<% end %>
+</div>

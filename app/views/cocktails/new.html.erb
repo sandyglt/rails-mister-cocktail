@@ -1,0 +1,6 @@
+<h1>Create your cocktails</h1>
+<%= simple_form_for @cocktail do |f| %>
+ <%= f.input :name, error: "le champ ne peut pas être vide", placeholder: "name", label: false%>
+  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+<% end %>
+<%= link_to "Go back", cocktails_path %>
